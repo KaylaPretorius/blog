@@ -1,0 +1,44 @@
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #C18799;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.one {
+  text-align: center;
+  color: #000;
+  font-weight: bolder;
+  text-shadow: 2px 2px #fff;
+  background-color: #565264;
+}
+
+p {
+  font-size: 17px;
+}
+
+.two {
+  text-align: center;
+  color: #000;
+  font-weight: bolder;
+  text-shadow: 2px 2px #fff;
+  background-color: #565264;
+  }
+
+.three {
+  text-align: center;
+  color: #000;
+  font-weight: bolder;
+  text-shadow: 2px 2px #fff;
+  background-color: #565264;
+  /* border-radius: 6px; */
+}
+
+.btn {
+  background-color: #565264;
+  }

@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #C18799;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.jumbotron{
+  text-align: center;
+  background-color:#13191f;
+  color: #000;
+  text-shadow: 2px 2px #fff;
+  font-weight: bolder;
+  background-image: url(../images/woman.jpeg);
+  background-size: 100% 100%;
+}
+
+.panel-heading{
+box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 1.0);
+}
+.panel-primary>.panel-heading {
+    color: #C18799;
+    background-color: #000;
+    border-color:silver;
+}
+.panel-primary{
+  border-color: none;
+}
