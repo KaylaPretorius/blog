@@ -1,0 +1,55 @@
+body {
+}
+
+@import url('https://fonts.googleapis.com/css?family=Philosopher');
+
+h2 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 120px;
+  padding: 20px;
+  text-shadow: 6px 2px #E9BB5C;
+}
+
+.header {
+  width: 100%;
+  height: 800px;
+  background-image: url(../images/sign.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+}
+
+.login {
+  margin-left: 22%;
+}
+
+#submit {
+  color: #E9BB5C;
+  background-color: #000;
+  border-color:  #E9BB5C;
+  border-radius: 4px;
+}
+
+#sign-in {
+  width: 50%;
+  margin-left: 23%;
+  position: relative;
+}
+
+.text {
+  margin-left: 54%;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 30px;
+  padding: 100px;
+  text-shadow: 2px 2px #E9BB5C;
+}
+
+label {
+  font-size: 25px;
+  font-family: 'Philosopher', sans-serif;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}

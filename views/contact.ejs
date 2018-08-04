@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>contact</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/contact.css'>
+</head>
+<body>
+
+<div class="fluid">
+
+<div class="row">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WomenInCoding</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/new">New Post</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+</div>
+
+</div>
+<div class="row">
+  <div class="header">
+  <h1>Contact Us</h1>
+</div>
+</div>
+
+<div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+
+    <label for="lname">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email address..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="South Africa">South Africa</option>
+      <option value="australlia">Australlia</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Send us a message</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input id="submit" type="submit" value="Submit">
+
+  </form>
+</div>
+
+
+
+<div class="newsletter">
+  <!-- <img id="subscribe-icon" src="images\subscribe-icon.png"> -->
+  <center><h2>Subscribe to Us</h2></center>
+  <p id="subscribe-text">You can now sign up for our newsletter here</p>
+  <input id="send" type="email" placeholder="enter your email...">
+  <button class="subscribe" type="button">Submit</button>
+</div>
+
+  <div class="row">
+
+    </div>
+
+<!--
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('.summernote').summernote();
+    }); -->
+    <!-- </script> -->
+  </body>
+  </html>

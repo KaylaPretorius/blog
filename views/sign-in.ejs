@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>signin</title>
+  <!-- Include CSS File Here -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/sign-in.css'>
+  <!-- Include JS File Here -->
+  <script src="js/login.js"></script>
+</head>
+
+
+<body sign>
+  <div class="container">
+    <div class="main">
+      <h2 class="text-center">Women in Coding</h2>
+    </div>
+  </div>
+
+  <div>
+    <form class="login" id="form_id" method="post" name="myform">
+      <label>User Name :</label>
+      <input type="text" name="username" id="username"/>
+      <label>Password :</label>
+      <input type="password" name="password" id="password"/>
+      <input type="button" value="Login" id="submit" onclick="validate()"/>
+    </form>
+  </div>
+
+  <div class="header">
+    <p class="text">To be able to code gives you the freedom to build anything. That is so empowering!</p>
+  </div>
+
+  <script>
+  var attempt = 3; // Variable to count number of attempts.
+  // Below function Executes on click of login button.
+  function validate(){
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if ( username == "Kayla" && password == "Password"){
+      alert ("Login successfully");
+      window.location = "/"; // Redirecting to other page.
+      return true;
+    }
+    else{
+      attempt --;// Decrementing by one.
+      alert("You have left "+attempt+" attempt;");
+      // Disabling fields after 3 attempts.
+      if( attempt == 0){
+        document.getElementById("username").disabled = true;
+        document.getElementById("password").disabled = true;
+        document.getElementById("submit").disabled = true;
+        return false;
+      }
+    }
+  }
+</script>
+</body>
+</html>

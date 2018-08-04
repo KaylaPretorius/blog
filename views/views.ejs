@@ -1,0 +1,67 @@
+<html>
+<head>
+  <title>views</title>
+  <!-- Include CSS File Here -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/views.css'>
+  <!-- Include JS File Here -->
+</head>
+
+<body>
+
+  <div class="fluid">
+
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WomenInCoding</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/new">New Post</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/sign-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="header">
+    <h1>Women in Coding</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="fluid">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><h3><%= posts.title %></h3>
+      </div>
+      <div class="panel-body">
+        <img src="<%=posts.image %>" alt=""width="100%" height="">
+        <p> <%-posts.content%>...</p>
+
+
+        <div><a href="/edit/<%-posts.id%>"><button class="btn btn-primary" type="button">edit</button></a></div>
+        <div><a href="/delete/<%-posts.id%>"><button class="btn btn-primary" type="button">delete</button></a></div>
+
+      </div>
+      <div class="panel-footer">
+        <p>Author: <%- posts.Author %></p>
+        <p>Date: <%= posts.date %></p>
+        <p>Time:<%= posts.time %></p>
+      </div>
+    </div>
+  </div>
+
+
+  <center><footer>© 2018 Copyright: WomenInCoding</footer>
+  </body>
+  </html>

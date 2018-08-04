@@ -1,98 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title %></title>
+  <title>home</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css'>
 </head>
 <body>
 
-  <div class="container">
-
-<div class="row">
-  <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WomenInCoding</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="/article">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
-
-</div>
-<div class="row">
-<div class="jumbotron">
-  <h1>Women in Coding</h1>
-</div>
-</div>
+  <div class="fluid">
 
     <div class="row">
-  <% if (posts) { %>
-
-    <% posts.forEach(function(post){ %>
-
-
-
-      <div class="col-xs-12 col-md-6 col-lg-4">
-      <div class="panel panel-primary">
-
-        <div class="panel-heading">
-          <h3 class="panel-title"><h3><%= post.title %></h3></h3>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WomenInCoding</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/new">New Post</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/sign-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
         </div>
-
-        <div class="panel-body">
-            <img src="<%=post.image %>" alt=""width="100%" height="">
-          <p> <%-post.content.substring(0,300) %>...</p>
-<!-- <button type="button" class="btn btn-primary" href"">Read more</button> -->
-<a href="article"><button class="btn btn-primary" type="button">Read More</button></a>
-
-        </div>
-        <div class="panel-footer">
-          <p>Author: <%- post.Author %></p>
-          <p>Date: <%= post.date %></p>
-          <p>Time:<%= post.time %></p>
-        </div>
-      </div>
-</div>
-
-
-  <!-- <h1><%= title %></h1>
-  <div class="panel panel-primary">
-
-    <div class="panel-heading">
-      <h3 class="panel-title">Panel Title</h3>
-    </div>
-
-    <div class="panel-body">
-      Panel content
-    </div>
-    <div class="panel-footer">
-      Panel footer
+      </nav>
     </div>
   </div>
-  <p>Welcome to <%= title %></p> -->
+
+</div>
+<div class="row">
+  <div class="header">
+    <h1>Women in Coding</h1>
+  </div>
+</div>
+
+<div class="row">
+
+  <% if (posts) { %>
+    <% posts.forEach(function(post){ %>
+
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><h3><%= post.title %></h3></h3>
+          </div>
+          <div class="panel-body">
+            <img src="<%=post.image %>" alt=""width="100%" height="">
+            <p> <%-post.content.substring(0,200) %>...</p>
 
 
+            <div><a href="/views/<%=post.id%>"><button class="btn btn-primary" type="button">Read More</button></a></div>
 
+          </div>
+          <div class="panel-footer">
+            <p>Author: <%- post.Author %></p>
+            <p>Date: <%= post.date %></p>
+            <p>Time:<%= post.time %></p>
+          </div>
+        </div>
+      </div>
 
+      <% }); %>
+      <% } else { %>
+        <p>You have no blog posts</p>
+        <% } %>
 
-
-
-
-    <% }); %>
-
-  <% } else { %>
-
-    <p>You have no blog posts</p>
-
-  <% } %>
-
-</body>
-</html>
+        <center><footer>© 2018 Copyright: WomenInCoding</footer></center>
+      </body>
+      </html>
